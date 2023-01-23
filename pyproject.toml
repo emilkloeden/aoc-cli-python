@@ -17,7 +17,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "aoc-cli-core == 0.0.2", 
+    "aoc-cli-core == 0.0.3", 
 ]
 
 [project.entry-points."aoc_cli.plugins"]

@@ -1,8 +1,8 @@
 from importlib.machinery import SourceFileLoader
 from pathlib import Path
 
-from aoc_core_cli import BaseSubmitter
-from aoc_core_cli.validations import is_valid_day, is_valid_year
+from aoc_cli_core import BaseSubmitter
+from aoc_cli_core.validations import is_valid_day, is_valid_year
 
 from .local_validations import is_valid_language
 
