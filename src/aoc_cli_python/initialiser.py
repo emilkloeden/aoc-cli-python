@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from aoc_core import BaseInitialiser
+from aoc_core_cli import BaseInitialiser
 
 from .language import __language__
 
