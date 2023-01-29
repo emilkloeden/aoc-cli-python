@@ -33,6 +33,6 @@ class Initialiser(BaseInitialiser):
     def write_file_templates(self):
         for i in range(1, 26):
             daily_file: Path = self.base_dir_location / f"{i:02}" / "day.py"
-            daily_file.write_text(self.file_content.replace("XXDAYXX", f"{i}"))
+            daily_file.write_text(self.file_content)
         
 

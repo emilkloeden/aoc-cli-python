@@ -18,4 +18,4 @@ class Getter(BaseGetter):
         if (self.day and self.year and self.language):
             self.input_file_location = self._p / "input.txt"
         else:
-            raise ValueError(f"Unable to ascertain required info 'year', 'language' and 'day' from path: {location.absolute()}")
+            raise ValueError(f"Unable to ascertain required info 'year', 'language' and 'day' from path: {self._p}")
