@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aoc-cli-python"
-version = "0.0.5"
+version = "0.0.6"
 authors = [
   { name="Emil Kloeden", email="emilkloeden@gmail.com" },
 ]

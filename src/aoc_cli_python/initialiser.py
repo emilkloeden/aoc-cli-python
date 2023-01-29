@@ -17,7 +17,7 @@ class Initialiser(BaseInitialiser):
         self.set_file_content_template()
 
     def set_file_content_template(self):
-        resources = files("aoc_cli_go")
+        resources = files("aoc_cli_python")
         self.file_content = (resources / "resources" / "day.py").read_text()
 
 
