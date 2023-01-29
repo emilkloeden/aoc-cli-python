@@ -1,5 +1,8 @@
 from pathlib import Path
 
+# We require python 3.10, so this is fine.
+from importlib.resources import files
+
 from aoc_cli_core import BaseInitialiser
 
 from .language import __language__
@@ -14,45 +17,9 @@ class Initialiser(BaseInitialiser):
         self.set_file_content_template()
 
     def set_file_content_template(self):
-        self.file_content = '''import argparse
-from pathlib import Path
+        resources = files("aoc_cli_go")
+        self.file_content = (resources / "resources" / "day.py").read_text()
 
-PROD = False
-
-def load_input():
-    return (Path() / "input.txt").read_text()
-
-TEST_INPUT = """
-"""
-
-INPUT = load_input() if PROD else TEST_INPUT
-
-
-def part_1() -> str:
-    raise NotImplementedError
-
-def part_2() -> str:
-    raise NotImplementedError
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
-    parser.add_argument('part', type=int, choices=(1,2))
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    parts = {
-        1: part_1,
-        2: part_2,
-    }
-    print(f"Day: XXDAYXX Part: {args.part}")
-    print(parts[args.part]())
-
-if __name__ == "__main__":
-    main()
-'''
 
     def initialise(self):
         print("[+] Scaffolding project...")
